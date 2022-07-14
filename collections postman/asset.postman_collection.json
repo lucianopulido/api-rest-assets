@@ -1,0 +1,85 @@
+{
+	"info": {
+		"_postman_id": "8958c43c-747d-4a62-b92e-468fabbaf5ae",
+		"name": "asset",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15614777"
+	},
+	"item": [
+		{
+			"name": "registrar asset",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"asset_type\":\"video\",\r\n    \"name\":\"video1\",\r\n    \"scores\":[\r\n        {\r\n            \"type_score\":\"score1\",\r\n            \"score\":7\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/gestion-asset/asset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"gestion-asset",
+						"asset"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener score promedio",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/gestion-asset/promedio/video/score1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"gestion-asset",
+						"promedio",
+						"video",
+						"score1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener asset",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/gestion-asset/asset/11",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"gestion-asset",
+						"asset",
+						"11"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
